@@ -1,6 +1,6 @@
 package com.CSO2.reporting_and_analysis_service.service;
 
-import com.CSO2.reporting_and_analysis_service.dto.OrderCreatedEvent;
+import com.CSO2.reporting_and_analysis_service.dto.event.OrderCreatedEvent;
 import com.CSO2.reporting_and_analysis_service.entity.DailySales;
 import com.CSO2.reporting_and_analysis_service.entity.ProductPerformance;
 import com.CSO2.reporting_and_analysis_service.repository.DailySalesRepository;

@@ -1,4 +1,4 @@
-package com.CSO2.reporting_and_analysis_service.dto;
+package com.CSO2.reporting_and_analysis_service.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
