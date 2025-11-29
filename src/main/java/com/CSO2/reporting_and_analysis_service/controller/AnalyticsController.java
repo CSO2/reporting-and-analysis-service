@@ -1,7 +1,7 @@
 package com.CSO2.reporting_and_analysis_service.controller;
 
-import com.CSO2.reporting_and_analysis_service.dto.response.DashboardMetricsDTO;
-import com.CSO2.reporting_and_analysis_service.dto.response.TopProductDTO;
+import com.CSO2.reporting_and_analysis_service.dto.DashboardMetricsDTO;
+import com.CSO2.reporting_and_analysis_service.dto.TopProductDTO;
 import com.CSO2.reporting_and_analysis_service.service.DashboardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;

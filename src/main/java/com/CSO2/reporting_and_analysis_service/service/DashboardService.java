@@ -3,7 +3,7 @@ package com.CSO2.reporting_and_analysis_service.service;
 import com.CSO2.reporting_and_analysis_service.dto.DashboardMetricsDTO;
 import com.CSO2.reporting_and_analysis_service.dto.TopProductDTO;
 import com.CSO2.reporting_and_analysis_service.entity.DailySales;
-import com.CSO2.reporting_and_analysis_service.entity.ProductPerformance;
+
 import com.CSO2.reporting_and_analysis_service.repository.DailySalesRepository;
 import com.CSO2.reporting_and_analysis_service.repository.ProductPerformanceRepository;
 import lombok.RequiredArgsConstructor;
