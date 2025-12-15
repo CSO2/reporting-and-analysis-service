@@ -1,0 +1,47 @@
+# --- Reporting & Analysis Service ---
+spring:
+  application:
+    name: reporting-and-analysis-service
+
+  # 1. Load Vault
+  config:
+    import: "optional:vault://"
+
+  # 2. Vault Config
+  cloud:
+    vault:
+      enabled: true
+      uri: http://localhost:8200
+      token: my-root-token
+      kv:
+        enabled: true
+        backend: kv
+        default-context: cs02-app
+      authentication: TOKEN
+
+  # 3. Database Config (Secrets from Vault)
+  datasource:
+    # Service specific database name
+    url: jdbc:postgresql://localhost:5432/CSO2_reporting_and_analysis_service
+    driver-class-name: org.postgresql.Driver
+    username: ${db_username}
+    password: ${db_password}
+
+  # 4. JPA / Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: ${JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # 5. Batch Job Config (Optional: initialize schema)
+  batch:
+    jdbc:
+      initialize-schema: always
+
+# --- Server Port ---
+server:
+  port: 8088
